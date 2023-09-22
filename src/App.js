@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Wallet from "./pages/Wallet/Wallet";
@@ -11,9 +11,11 @@ import Deposit from "./pages/Deposit/Deposit";
 import Pays from "./pages/Pay/Pay";
 
 function App() {
+  const location = useLocation();
+  const hideNavbar = location.pathname === "/";
   return (
     <>
-      <Navbar />
+      {!hideNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/wallet" element={<Wallet />} />
