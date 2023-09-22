@@ -1,0 +1,211 @@
+.stepsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 924px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.stepsContainer .step {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media screen and (max-width: 575px) {
+  .stepsContainer .step {
+    width: auto;
+  }
+}
+.stepsContainer .step .number {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #1e2a44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+  position: relative;
+}
+.stepsContainer .step .number .dottedLine {
+  position: absolute;
+  width: 710px;
+  height: 2px;
+  border-top: 2px dashed var(--caret-dark);
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 960px) {
+  .stepsContainer .step .number .dottedLine {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .stepsContainer .step .number .dottedLine {
+    width: 65vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .stepsContainer .step .number .dottedLine {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .stepsContainer .step .number .dottedLine {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 490px) {
+  .stepsContainer .step .number .dottedLine {
+    display: none;
+  }
+}
+.stepsContainer .step .label {
+  color: var(--text);
+}
+@media screen and (max-width: 575px) {
+  .stepsContainer .step .label {
+    font-size: 12px;
+  }
+}
+.stepsContainer .step.active .number {
+  background-color: #6c62e2;
+}
+.stepsContainer .step.active .label {
+  color: #fff;
+}
+.emailIdInputWrap,
+.enterAmountWrap,
+.confirmPayment {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.emailIdInputWrap .profile,
+.enterAmountWrap .profile,
+.confirmPayment .profile {
+  padding: 46px 56px;
+  border-radius: 20px;
+  background-color: #1e2a44;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.emailIdInputWrap .covert,
+.enterAmountWrap .covert,
+.confirmPayment .covert {
+  width: 34px;
+  height: 34px;
+  background-color: #010e29;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emailIdInputWrap .covert img,
+.enterAmountWrap .covert img,
+.confirmPayment .covert img {
+  width: 16px;
+}
+.emailIdInputWrap input {
+  height: 50px;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+  background-color: #010e29;
+  border: none;
+  outline: none;
+  margin-top: 44px;
+  margin-bottom: 20px;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.options button {
+  background-color: #1e2a44;
+  border-radius: 50px;
+  height: 46px;
+  padding: 0 32px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.options button.active {
+  background-color: #6c62e2;
+}
+.withdrawForm input,
+.enterAmountWrap input {
+  height: 70px;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #1e2a44;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+}
+.withdrawForm .usdt,
+.enterAmountWrap .usdt {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}
+.previous {
+  background: #fff 4d;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.previous:hover {
+  transform: translateY(-3px);
+}
+.previous:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.continue {
+  background: #6c62e2;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.continue:hover {
+  transform: translateY(-3px);
+}
+.continue:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.withdrawForm {
+  margin-top: 70px;
+}
+.withdrawForm .item {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.withdrawForm .item .label {
+  width: 122px;
+}
+.withdrawForm .item .inputContainer {
+  width: 592px;
+}

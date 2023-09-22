@@ -1,0 +1,92 @@
+.wrapper {
+  position: relative;
+}
+
+.forEveryOne {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+
+  margin: 0 auto;
+  padding-top: 50px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.forEveryOneImg {
+  width: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.getStartedButton {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 102.564px;
+  background: linear-gradient(88deg, #6c62e2 -50.23%, #493fc5 98.56%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 40px;
+  margin-top: 10px;
+}
+.bgUnionImg {
+  position: absolute;
+  width: 60%;
+  left: 0;
+  height: 400px;
+
+  bottom: -300px;
+  z-index: -1;
+}
+.bgCoinImg {
+  position: absolute;
+  max-width: 150px;
+  left: 0;
+
+  bottom: -10%;
+  z-index: -1;
+}
+@media only screen and (max-width: 1199px) {
+  .getStartedButton {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .forEveryOne {
+    grid-template-columns: 1fr;
+  }
+  .textContainer {
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    order: -1;
+  }
+  .forEveryOneImg {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .bgCoinImg {
+    width: 70px;
+    bottom: -50px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .getStartedButton {
+    font-size: 16px;
+  }
+}

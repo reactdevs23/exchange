@@ -1,0 +1,167 @@
+.mainWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.fixedNavbar {
+  background: #09152f;
+
+  box-shadow: 0px 4px 50px 0px rgba(255, 255, 255, 0.1);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 0;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.logoText {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.navItem {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.3s;
+}
+.navItem:hover {
+  opacity: 0.8;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.mobileButtonContainer {
+  display: none;
+}
+.button {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 50px;
+
+  border: 1px solid transparent;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 9px 22px;
+  transition: 0.3s;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.signUpButton {
+  background: linear-gradient(88deg, #6c62e2 -50.23%, #493fc5 98.56%);
+  border: 1px solid transparent;
+}
+.signInButton {
+  border: 1px solid #fff;
+  background: transparent;
+}
+.hamburger,
+.mobileHamburger {
+  display: none;
+  color: #fff;
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1199px) {
+  .navItems {
+    gap: 25px;
+  }
+  .buttonContainer {
+    gap: 14px;
+  }
+  .button {
+    font-size: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navItems {
+    position: fixed;
+    flex-direction: column;
+    gap: 25px;
+    transform: translateX(150%);
+    transition: 0.3s;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+    background: #09152f;
+    max-width: 290px;
+    width: 100%;
+    padding-top: 100px;
+    z-index: 2;
+  }
+  .sidebar {
+    transform: translateX(0%);
+    transition: 0.3s;
+    box-shadow: 0px 4px 50px 0px rgba(255, 255, 255, 0.1);
+    z-index: 2;
+  }
+  .hamburger {
+    display: block;
+  }
+  .close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .buttonContainer {
+    display: none;
+  }
+  .mobileButtonContainer {
+    display: flex;
+    gap: 5px;
+    padding-top: 5px;
+  }
+
+  .mobileHamburger {
+    display: block;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .logo {
+    width: 42px;
+    height: 42px;
+  }
+  .logoText {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,194 @@
+.mainWrapper {
+  padding: 100px 0;
+}
+.wrapper {
+  border-radius: 30px;
+  background: linear-gradient(88deg, #6c62e2 -50.23%, #493fc5 98.56%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 140px 50px;
+  z-index: 1;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  width: 100%;
+}
+.title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text {
+  color: #dedddd;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 159.523%;
+  max-width: 650px;
+}
+.getStartedButton {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 102.564px;
+  background: #140c70;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 40px;
+  margin-top: 7px;
+}
+.startCryptoImage {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  width: 100%;
+  display: block;
+  max-width: 600px;
+  z-index: -1;
+}
+.startCryptoUnion {
+  max-width: 300px;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-40%);
+  z-index: -1;
+}
+.startCryptoGoldCoin {
+  position: absolute;
+  width: 100px;
+  top: 0;
+  left: 10%;
+  transform: translate(0%, -50%);
+  z-index: -1;
+}
+.startCryptoBlackCoin {
+  position: absolute;
+  width: 70px;
+  left: 30%;
+  bottom: 0;
+  transform: translate(0%, 50%);
+  z-index: -1;
+}
+/* @media only screen and (max-width: 1700px) {
+  .textContainer {
+    max-width: 650px;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .text,
+  .getStartedButton {
+    font-size: 24px;
+  }
+} */
+
+@media only screen and (max-width: 1380px) {
+  .wrapper {
+    padding: 100px 50px;
+  }
+  .startCryptoImage {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    padding: 80px 50px;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .startCryptoImage {
+    width: 470px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 80px 30px;
+  }
+  .textContainer {
+    align-items: center;
+  }
+  .startCryptoImage {
+    position: static;
+    margin-top: -100px;
+    width: 100%;
+    max-width: 400px;
+  }
+  .title {
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+  }
+  .startCryptoGoldCoin {
+    width: 80px;
+  }
+  .startCryptoBlackCoin {
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 40px;
+  }
+  .text,
+  .getStartedButton {
+    font-size: 16px;
+  }
+  .startCryptoImage {
+    margin-top: -50px;
+  }
+  .startCryptoGoldCoin {
+    width: 70px;
+  }
+  .startCryptoBlackCoin {
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding: 50px 15px;
+  }
+  .title {
+    font-size: 32px;
+  }
+
+  .startCryptoImage {
+    margin-top: -70px;
+  }
+  .startCryptoGoldCoin {
+    width: 50px;
+  }
+  .startCryptoBlackCoin {
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .startCryptoGoldCoin {
+    width: 40px;
+  }
+  .startCryptoBlackCoin {
+    width: 24px;
+  }
+}

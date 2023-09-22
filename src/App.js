@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Wallet from "./pages/Wallet/Wallet";
+import WithDrawCrypto from "./components/WithDrawCrypto/WithDrawCrypto";
+import ChooseCurrency from "./components/ConvertCurrency/ChooseCurrency/ChooseCurrency";
+import WithdrawCryptoSuccess from "./components/WithDrawCrypto/WithdrawCryptoSuccess/WithdrawCryptoSuccess";
+import Footer from "./components/Footer/Footer";
+import Convert from "./pages/ConvertCurrency/ConvertCurrency";
+import Deposit from "./pages/Deposit/Deposit";
+import Pays from "./pages/Pay/Pay";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/deposit" element={<Deposit />} />
+        <Route path="/pay" element={<Pays />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 

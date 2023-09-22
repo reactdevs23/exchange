@@ -1,0 +1,78 @@
+.wrapper {
+  position: relative;
+}
+.onePlatform {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+  padding-right: 5%;
+  max-width: 1991px;
+  margin: 0 auto;
+}
+
+.onePlatformImg {
+  max-width: 785px;
+  width: 100%;
+}
+
+.textContainer {
+  max-width: 785px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.getStartedButton {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 102.564px;
+  background: linear-gradient(88deg, #6c62e2 -50.23%, #493fc5 98.56%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 40px;
+  margin-top: 10px;
+}
+.bgImg {
+  position: absolute;
+  width: 80%;
+  right: 0;
+  height: 300px;
+  bottom: 0px;
+  z-index: -1;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1199px) {
+  .getStartedButton {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .onePlatform {
+    grid-template-columns: 1fr;
+  }
+  .textContainer {
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    order: -1;
+  }
+  .onePlatformImg {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .getStartedButton {
+    font-size: 16px;
+  }
+}

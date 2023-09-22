@@ -1,0 +1,140 @@
+.wrapper {
+  max-width: 817px;
+  margin: 0 auto;
+  width: 93%;
+  border-radius: 20px;
+  background: #1e2a44;
+  padding: 24px 0;
+}
+.heading {
+  color: #fff;
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0px 35px;
+  padding-bottom: 18px;
+}
+.networkWrapper {
+  max-height: 70vh;
+  height: auto;
+  overflow-y: auto;
+}
+.networkContainer {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 35px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.networkContainer:hover {
+  background: #303d59;
+}
+
+.networkName {
+  color: #fff;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info,
+.arrivalTime,
+.fee {
+  color: #767a89;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.arrivalTime,
+.fee {
+  text-align: right;
+}
+@media only screen and (max-width: 991px) {
+  .heading {
+    font-size: 30px;
+    padding: 0px 20px;
+    padding-bottom: 18px;
+  }
+  .networkContainer {
+    padding: 15px 20px;
+  }
+  .networkName,
+  .info,
+  .arrivalTime,
+  .fee {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .heading {
+    font-size: 24px;
+    padding: 0px 20px;
+    padding-bottom: 18px;
+  }
+  .networkContainer {
+    padding: 15px 20px;
+  }
+  .networkName,
+  .info,
+  .arrivalTime,
+  .fee {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  /* .networkContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  } */
+  .heading {
+    font-size: 18px;
+    padding: 0px 13px;
+    padding-bottom: 18px;
+  }
+  .networkContainer {
+    padding: 10px 13px;
+    gap: 5px;
+  }
+  .networkName,
+  .info,
+  .arrivalTime,
+  .fee {
+    font-size: 12px;
+  }
+}
+/* scrollbar css */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.networkWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #6c62e2 rgba(250, 250, 250, 0.2);
+}
+
+/* Chrome, Edge, and Safari */
+.networkWrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.networkWrapper::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+}
+
+.networkWrapper::-webkit-scrollbar-thumb {
+  background: #6c62e2;
+  border-radius: 100vh;
+  border: none;
+}

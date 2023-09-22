@@ -1,0 +1,260 @@
+.heroSection {
+  background-image: url(../../../images/heroUnion.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 120px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  isolation: isolate;
+}
+.title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title span {
+  background-image: url("../../../images/line.png");
+  background-position: center 90%;
+  background-size: 100% 20px;
+  background-repeat: no-repeat;
+}
+.tagline {
+  color: #dedddd;
+  font-family: Inter;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 159.523%;
+  max-width: 650px;
+}
+.heroImage {
+  width: 100%;
+  max-width: 620px;
+}
+.buttonAndCustomers {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-top: 8px;
+}
+.getStartedButton {
+  color: #fff;
+  font-family: Inter;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 102.564px;
+  background: linear-gradient(88deg, #6c62e2 -50.23%, #493fc5 98.56%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 40px;
+}
+.userImages {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  isolation: isolate;
+  /* width: 110px; */
+  width: 85px;
+  height: 62px;
+  margin-right: 31px;
+}
+.userImages .userImage:nth-child(1) {
+  position: absolute;
+  left: 0%;
+  z-index: -4;
+}
+.userImages .userImage:nth-child(2) {
+  position: absolute;
+  left: 25%;
+  z-index: -3;
+}
+.userImages .userImage:nth-child(3) {
+  position: absolute;
+  left: 50%;
+
+  z-index: -2;
+}
+.userImages .userImage:nth-child(4) {
+  position: absolute;
+  left: 75%;
+}
+
+.userImage {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: contain;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.happyCustomers {
+  display: flex;
+  flex-direction: column;
+}
+.customerBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.star {
+  font-size: 28px;
+  color: #ff7629;
+}
+
+.customerNumber {
+  color: #fff;
+  font-family: Inter;
+
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120.523%;
+}
+
+.happyCustomerText {
+  color: #767a89;
+  font-family: Inter;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120.523%;
+}
+@media only screen and (max-width: 1620px) {
+  .title {
+    font-size: 70px;
+  }
+  .tagline {
+    font-size: 23px;
+  }
+
+  .userImages {
+    width: 95px;
+  }
+  .userImage {
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 1340px) {
+  .wrapper {
+    grid-template-columns: 1fr 0.9fr;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .buttonAndCustomers {
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    gap: 20px 50px;
+  }
+  .getStartedButton {
+    order: 3;
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .title {
+    font-size: 58px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  .getStartedButton {
+    font-size: 18px;
+  }
+  .customerNumber {
+    font-size: 28px;
+  }
+  .happyCustomerText {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .content {
+    align-items: center;
+  }
+  .title,
+  .tagline {
+    text-align: center;
+  }
+  .buttonAndCustomers {
+    display: flex;
+    gap: 25px;
+  }
+  .getStartedButton {
+    order: -1;
+  }
+  .heroImage {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .buttonAndCustomers {
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    gap: 20px 50px;
+  }
+  .getStartedButton {
+    order: 3;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .title {
+    font-size: 45px;
+  }
+  .title span {
+    background-size: 100% 15px;
+  }
+  .tagline {
+    font-size: 18px;
+  }
+  .getStartedButton {
+    font-size: 16px;
+    padding: 14px 35px;
+  }
+  .customerNumber {
+    font-size: 22px;
+  }
+  .happyCustomerText {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .buttonAndCustomers {
+    gap: 20px 35px;
+  }
+  .userImages {
+    width: 80px;
+  }
+  .userImage {
+    width: 45px;
+  }
+}

@@ -1,0 +1,87 @@
+.stepItem {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+}
+@media screen and (max-width: 767px) {
+  .stepItem {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .stepItem {
+    flex-direction: column;
+  }
+}
+.stepItem .labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  width: 245px;
+  min-height: 80px;
+}
+@media screen and (max-width: 575px) {
+  .stepItem .labelContainer {
+    width: 100%;
+  }
+}
+.stepItem .labelContainer .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #1e2a44;
+  position: relative;
+}
+.stepItem .labelContainer .number .dottedLine {
+  position: absolute;
+  width: 2px;
+  height: 300px;
+  border-right: 2px dashed var(--caret-dark);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+@media screen and (max-width: 575px) {
+  .stepItem .labelContainer .number .dottedLine {
+    display: none;
+  }
+}
+.stepItem .inputsContainer {
+  width: 400px;
+}
+@media screen and (max-width: 575px) {
+  .stepItem .inputsContainer {
+    width: 100%;
+  }
+}
+.stepItem .addressContainer {
+  background-color: #1e2a44;
+  border-radius: 20px;
+  padding: 24px;
+}
+.stepItem .addressContainer .copy {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #09152f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.stepItem .addressContainer .copy img {
+  width: 14px;
+}
+.stepItem .addressContainer .details {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--caret-dark);
+}
+.stepItem.active .number {
+  background-color: var(--primary);
+}

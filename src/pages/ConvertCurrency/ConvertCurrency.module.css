@@ -1,0 +1,123 @@
+.card {
+  border-radius: 20px;
+  background-color: #1e2a44;
+  padding: 32px;
+}
+.card .inner {
+  padding: 16px 26px;
+  background-color: #010e29;
+  border-radius: 20px;
+}
+.card .input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 1280px) {
+  .cardsContainer {
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.cardsContainer > div:first-child {
+  width: 570px;
+}
+@media screen and (max-width: 767px) {
+  .cardsContainer > div:first-child {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+.cardsContainer > div:nth-child(2) {
+  width: 470px;
+}
+@media screen and (max-width: 767px) {
+  .cardsContainer > div:nth-child(2) {
+    width: 100%;
+  }
+}
+.btnBlue {
+  background: #6c62e2;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.btnBlue:hover {
+  transform: translateY(-3px);
+}
+.btnBlue:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.btnGreen {
+  background: var(--green);
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.btnGreen:hover {
+  transform: translateY(-3px);
+}
+.btnGreen:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.sliderDots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.sliderDots::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #17223c;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  width: calc(100% - 25px);
+  height: 10px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.sliderDots .sliderDot {
+  width: 20px;
+  height: 20px;
+  background-color: #3a4a6c;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  z-index: 1;
+}
+.sliderDots .sliderDot.active {
+  background-color: #6c62e2;
+  box-shadow: 0px 4px 20px 0px #000 40;
+}

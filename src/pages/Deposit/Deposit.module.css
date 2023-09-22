@@ -1,0 +1,33 @@
+.mainWrap .below {
+  max-width: 1598px;
+  margin-left: auto;
+  margin-top: 80px;
+}
+.mainWrap .below .mainWrap {
+  padding: 50px 66px;
+}
+@media screen and (max-width: 1535px) {
+  .mainWrap .below .mainWrap {
+    padding: 32px;
+  }
+}
+.mainWrap .below .mainWrap .content {
+  display: flex;
+  gap: 66px;
+}
+@media screen and (max-width: 1535px) {
+  .mainWrap .below .mainWrap .content {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .mainWrap .below .mainWrap .content {
+    flex-direction: column;
+  }
+}
+
+.below {
+  max-width: 1598px;
+  margin-left: auto;
+  margin-top: 80px;
+}

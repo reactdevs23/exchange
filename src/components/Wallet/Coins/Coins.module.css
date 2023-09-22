@@ -1,0 +1,54 @@
+.coins {
+  padding-top: 42px;
+}
+.coins .filterContainer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .coins .filterContainer {
+    flex-wrap: wrap;
+  }
+}
+.coins .filterContainer .searchContainer {
+  position: relative;
+}
+.coins .filterContainer .searchContainer img {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.coins .filterContainer .searchContainer input {
+  font-size: 18px;
+  padding: 14px;
+  padding-left: 56px;
+  background-color: #1e2a44;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+}
+.coins .dataTable {
+  margin-top: 38px;
+}
+.coins .dataTable .coinImg {
+  width: 34px;
+  height: 34px;
+}
+.coins .dataTable .btnActions {
+  display: flex;
+  gap: 16px;
+}
+.coins .dataTable .btnActions .btn {
+  border: none;
+  border-radius: 50px;
+  background: rgba(108, 98, 226, 0.2);
+  padding: 7px 17px;
+  gap: 10px;
+  color: #a49cff;
+  cursor: pointer;
+}
+.table {
+  min-width: 960px;
+}
