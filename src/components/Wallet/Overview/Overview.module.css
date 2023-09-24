@@ -1,0 +1,91 @@
+.overview {
+  border-bottom: 1px solid var(--caret-dark);
+  padding-bottom: 36px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+.top .btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.subTitle1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.subTitle1 img {
+  cursor: pointer;
+}
+.subTitle2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+.subTitle3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.tab {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.tab.active {
+  color: #fff;
+}
+
+@media only screen and (max-width: 575px) {
+  .bottom > * {
+    width: 100%;
+  }
+  .tabs {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .btns {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .title {
+    font-size: 30px;
+  }
+  .subTitle1 {
+    font-size: 18px;
+  }
+  .subTitle2 {
+    font-size: 24px;
+  }
+}

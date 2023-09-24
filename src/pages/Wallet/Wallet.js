@@ -1,5 +1,5 @@
 import Sidebar from "../../components/Wallet/Sidebar/Sidebar";
-import Coins from "../../components/Wallet/Coins/Coins";
+import Coins from "../../components/Wallet/Overview/Coins/Coins";
 import Overview from "../../components/Wallet/Overview/Overview";
 
 import classes from "./Wallet.module.css";
@@ -12,7 +12,6 @@ const Wallet = () => {
 
         <div className={classes.main}>
           <Overview />
-          <Coins />
         </div>
       </div>
     </div>

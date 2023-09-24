@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import DataTable from "react-data-table-component";
 
-import Checkbox from "../../../components/Checkbox/Checkbox";
+import Checkbox from "../../../Checkbox/Checkbox";
 import classes from "./Coins.module.css";
 import {
   ada,
@@ -17,7 +17,7 @@ import {
   search,
   sol,
   vet,
-} from "../../../images/images";
+} from "../../../../images/images";
 
 const columns = [
   {
@@ -26,11 +26,11 @@ const columns = [
     sortable: true,
     minWidth: "160px",
     cell: (row) => (
-      <div className="d-flex gap-2">
+      <div className={classes.row}>
         <img className={classes.coinImg} src={row.coinIcon} alt="" />
         <div>
-          <div className="fw-bold">{row.coin}</div>
-          <div className="text-light-1">{row.fullName}</div>
+          <p className={classes.bold}>{row.coin}</p>
+          <p className={classes.text}>{row.fullName}</p>
         </div>
       </div>
     ),
@@ -41,8 +41,8 @@ const columns = [
     sortable: true,
     cell: (row) => (
       <div>
-        <div className="fw-bold">{row.total}</div>
-        <div className="text-light-1">{row.totalApprox}</div>
+        <p className={classes.bold}>{row.total}</p>
+        <p className={classes.text}>{row.totalApprox}</p>
       </div>
     ),
   },
@@ -4089,7 +4089,7 @@ const Coins = () => {
   const [data, setData] = useState(dataRaw);
   const [itemOffset, setItemOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
-
+  const [hideSmallBalance, setHideSmallBalance] = useState(false);
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
     // console.log(
@@ -4123,16 +4123,19 @@ const Coins = () => {
             placeholder="Search Coin"
           />
         </div>
-        <Checkbox label="Hide Small Balances" />
+        <Checkbox
+          label="Hide Small Balances"
+          onClick={() => setHideSmallBalance((prev) => !prev)}
+        />
       </div>
       <div className={classes.dataTable}>
-        <div className="table-container">
+        <div className={classes.tableContainer}>
           <div className={classes.table}>
             <DataTable columns={columns} data={currentItems} />{" "}
           </div>
         </div>
         <ReactPaginate
-          className="coins-pagination"
+          className={classes.coinsPagination}
           breakLabel="..."
           nextLabel={<img src={pageArrowRight} alt="arrow" />}
           onPageChange={handlePageClick}

@@ -15,7 +15,7 @@ const Button = ({ icon, rounded, primary, outlined, children, onClick }) => {
     >
       {icon && (
         <span className={classes.icon}>
-          <img className="d-block" src={icon} alt="btn" />
+          <img className={classes.image} src={icon} alt="btn" />
         </span>
       )}
       <span className={classes.text}>{children}</span>

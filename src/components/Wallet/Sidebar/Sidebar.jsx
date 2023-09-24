@@ -15,7 +15,7 @@ import classes from "./Sidebar.module.css";
 const items = [
   {
     label: "Overview",
-    to: "/",
+    to: "/wallet",
     icon: overview,
   },
   {

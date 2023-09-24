@@ -1,0 +1,90 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-weight: 700;
+  cursor: pointer;
+}
+.activeTab {
+  color: #6c62e2;
+}
+.input {
+  height: 70px;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #1e2a44;
+  border: none;
+  outline: none;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addressTitle {
+  font-weight: 700;
+}
+.selectNetwork {
+  height: 70px;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #1e2a44;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.networkName {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.info {
+  color: #767a89;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.arrow {
+  font-size: 24px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .selectNetwork {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .networkName {
+    font-size: 14px;
+  }
+  .info {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .selectNetwork {
+    height: 50px;
+  }
+}

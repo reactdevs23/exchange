@@ -1,0 +1,135 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coins {
+  padding-top: 42px;
+}
+.coins .filterContainer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.coins .filterContainer .searchContainer {
+  position: relative;
+}
+.coins .filterContainer .searchContainer img {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.coins .filterContainer .searchContainer input {
+  font-size: 18px;
+  padding: 14px;
+  padding-left: 56px;
+  background-color: #1e2a44;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+}
+.coins .dataTable {
+  margin-top: 38px;
+}
+.coins .dataTable .coinImg {
+  width: 34px;
+  height: 34px;
+}
+.coins .dataTable .btnActions {
+  display: flex;
+  gap: 16px;
+}
+.coins .dataTable .btnActions .btn {
+  border: none;
+  border-radius: 50px;
+  background: rgba(108, 98, 226, 0.2);
+  padding: 7px 17px;
+  gap: 10px;
+  color: #a49cff;
+  cursor: pointer;
+}
+.table {
+  min-width: 960px;
+}
+.bold {
+  font-weight: 700;
+}
+.text {
+  color: var(--text);
+}
+.tableContainer {
+  overflow: auto;
+}
+.coinsPagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.coinsPagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.coinsPagination li {
+  list-style-type: none;
+}
+
+.coinsPagination li.disabled a {
+  background-color: #1d2453;
+  pointer-events: none;
+}
+
+.coinsPagination li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--caret-dark);
+  font-size: 13px;
+  cursor: pointer;
+}
+.coinsPagination li.selected a {
+  background-color: #6c62e2;
+  color: #fff;
+}
+
+.coinsPagination li img {
+  width: 7px;
+}
+@media screen and (max-width: 575px) {
+  .coinsPagination {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .coinsPagination li a {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .coins .filterContainer {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 575px) {
+  .coinsPagination li img {
+    width: 5px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .coins .filterContainer .searchContainer input {
+    font-size: 16px;
+  }
+}

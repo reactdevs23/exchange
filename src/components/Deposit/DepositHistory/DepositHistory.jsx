@@ -9,11 +9,11 @@ const columns = [
     sortable: true,
     minWidth: "140px",
     cell: (row) => (
-      <div className="d-flex gap-2">
+      <div className={classes.row}>
         <img className={classes.coinImg} src={row.coinIcon} alt="" />
         <div>
-          <div className="fw-bold">{row.coin}</div>
-          <div className="text-light-1">{row.fullName}</div>
+          <h4 className={classes.coin}>{row.coin}</h4>
+          <div className={classes.text}>{row.fullName}</div>
         </div>
       </div>
     ),
@@ -22,18 +22,23 @@ const columns = [
     name: "Time",
     selector: (row) => row.total,
     sortable: true,
-    cell: (row) => <div className="text-light-1">{row.time}</div>,
+    cell: (row) => <p className={classes.text}>{row.time}</p>,
   },
   {
     name: "Amount",
-    cell: (row) => <div className="text-light-1">{row.amount}</div>,
+    cell: (row) => <p className={classes.text}>{row.amount}</p>,
   },
   {
     name: "Blockchain Record",
     minWidth: "140px",
     cell: (row) => (
-      <div className="text-primary-1">
-        <a href="https://www.google.com" target="_blank" rel="noreferrer">
+      <div>
+        <a
+          href="https://www.google.com"
+          target="_blank"
+          rel="noreferrer"
+          className={classes.primaryColor}
+        >
           View Transaction
         </a>
       </div>
@@ -41,11 +46,11 @@ const columns = [
   },
   {
     name: "Status",
-    cell: (row) => <div className="text-light-1">{row.status}</div>,
+    cell: (row) => <div className={classes.text}>{row.status}</div>,
   },
   {
     name: "Remarks",
-    cell: (row) => <div className="text-light-1">{row.remarks}</div>,
+    cell: (row) => <div className={classes.text}>{row.remarks}</div>,
   },
 ];
 
@@ -94,13 +99,13 @@ const data = [
 
 const DepositHistory = () => {
   return (
-    <div className="">
-      <div className="fs-4 fw-bold mb-3">Deposit History</div>
-      <div className="overflow-auto">
+    <div className={classes.mainWrapper}>
+      <div className={classes.title}>Deposit History</div>
+      <div className={classes.overFlow}>
         <DataTable columns={columns} data={data} />
       </div>
 
-      <div className="text-center text-underline mt-5 c-pointer">View All</div>
+      <p className={classes.viewAll}>View All</p>
     </div>
   );
 };

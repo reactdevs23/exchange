@@ -1,35 +1,28 @@
-import clsx from "clsx";
-
-import { doubleArrow, money, userAvatar } from "../../images/images";
+import { doubleArrow, money, tether, userAvatar } from "../../images/images";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import classes from "./Pay.module.css";
 
-const ConfirmPayment = ({ onPrev, onContinue }) => {
+const ConfirmPayment = ({ onPrev, setPaymentSuccessFull }) => {
   return (
     <div className={classes.confirmPayment}>
-      <div
-        className={clsx(
-          classes.profile,
-          "d-flex flex-column flex-sm-row justify-content-center gap-5 align-items-center"
-        )}
-      >
-        <div className="d-flex flex-column align-items-center gap-2">
-          <img src={userAvatar} alt="avatar" />
-          <div className="fw-bold">200 USDT</div>
+      <div className={classes.profile}>
+        <div className={classes.imgAndAmount}>
+          <img src={tether} alt="avatar" />
+          <h4 className={classes.bold}>200 USDT</h4>
         </div>
 
         <div className={classes.covert}>
           <img src={doubleArrow} alt="" />
         </div>
 
-        <div className="d-flex flex-column align-items-center gap-2">
+        <div className={classes.imgAndAmount}>
           <img src={userAvatar} alt="avatar" />
-          <div className="fw-bold">Alex Smith</div>
+          <h4 className={classes.bold}>Alex Smith</h4>
         </div>
       </div>
 
-      <div className="mt-46">
-        <div className="fw-bold mb-3">Payment Method</div>
+      <div className={classes.dropdownContainer}>
+        <h4 className={classes.dropDownTitle}>Payment Method</h4>
 
         <Dropdown
           pattern1
@@ -46,11 +39,16 @@ const ConfirmPayment = ({ onPrev, onContinue }) => {
         />
       </div>
 
-      <div className="d-flex gap-4 mt-4">
+      <div className={classes.buttonContainer}>
         <button onClick={onPrev} className={classes.previous}>
           Previous Step
         </button>
-        <button onClick={onContinue} className={classes.continue}>
+        <button
+          className={classes.continue}
+          onClick={() => {
+            setPaymentSuccessFull(true);
+          }}
+        >
           Continue
         </button>
       </div>

@@ -67,7 +67,7 @@ a {
   .mainWrapper {
   }
 }
-.block {
+/* .block {
   display: block;
 }
 
@@ -118,7 +118,7 @@ a {
 
 .text-underline {
   text-decoration: underline;
-}
+} */
 
 .rdt_Table > div {
   background-color: transparent !important;
@@ -159,82 +159,7 @@ a {
   border-bottom-color: #353b50 !important;
 }
 
-.break-long {
-  word-break: break-word;
-}
-
-.relative {
-  position: relative;
-}
-
-.table-container {
-  overflow: auto;
-}
-
-.overflow-auto {
-  overflow: auto;
-}
-
-.coins-pagination {
-  display: flex;
-  justify-content: flex-end;
-  gap: 14px;
-  margin-top: 40px;
-}
-
-.coins-pagination .previous {
-}
-
-.coins-pagination li {
-  list-style-type: none;
-}
-
-.coins-pagination li.disabled a {
-  background-color: #1d2453;
-  pointer-events: none;
-}
-
-.coins-pagination li a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--caret-dark);
-  font-size: 13px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 575px) {
-  .coins-pagination {
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-
-  .coins-pagination li a {
-    width: 22px;
-    height: 22px;
-    font-size: 8px;
-  }
-}
-
-.coins-pagination li.selected a {
-  background-color: #6c62e2;
-  color: #fff;
-}
-
-.coins-pagination li img {
-  width: 7px;
-}
-
-@media screen and (max-width: 575px) {
-  .coins-pagination li img {
-    width: 5px;
-  }
-}
-
-.flex-wrap {
+/* .flex-wrap {
   flex-wrap: wrap;
 }
 
@@ -832,7 +757,7 @@ a {
   .align-items-sm-stretch {
     align-items: stretch !important;
   }
-}
+} */
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

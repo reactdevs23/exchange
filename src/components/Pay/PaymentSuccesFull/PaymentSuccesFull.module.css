@@ -62,6 +62,16 @@
   width: 20px;
   cursor: pointer;
 }
+.userContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.userImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 .text {
   color: #767a89;
   font-family: Inter;
@@ -122,6 +132,10 @@
   }
   .tagline {
     font-size: 20px;
+  }
+  .userImage {
+    width: 24px;
+    height: 24px;
   }
   .text {
     font-size: 13px;

@@ -1,0 +1,72 @@
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.button {
+  background-color: #1e2a44;
+  border-radius: 50px;
+  height: 46px;
+  padding: 0 32px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+  white-space: nowrap;
+}
+
+.activeButton {
+  background: #6c62e2;
+}
+.input {
+  height: 70px;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #1e2a44;
+  border: none;
+  outline: none;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.continue {
+  background: #6c62e2;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.continue:hover {
+  transform: translateY(-3px);
+}
+.continue:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+@media only screen and (max-width: 767px) {
+  .input {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .input {
+    height: 50px;
+  }
+}

@@ -1,0 +1,156 @@
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.bold {
+  font-weight: 700;
+}
+.optionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.options {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.options button {
+  background-color: #1e2a44;
+  border-radius: 50px;
+  height: 46px;
+  padding: 0 32px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.options button.active {
+  background-color: #6c62e2;
+}
+.withdrawFrom input {
+  height: 70px;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #1e2a44;
+  border: none;
+  outline: none;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addressTitle {
+  font-weight: 700;
+}
+.withdrawFrom .usdt {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}
+
+.withdrawFrom {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.withdrawFrom .item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  max-width: 810px;
+  margin: 0 auto;
+}
+.withdrawFrom .sendTo {
+  align-items: flex-start;
+}
+.withdrawFrom .sendTo .label {
+  margin-top: 10px;
+}
+/* .withdrawFrom .item .label {
+  width: 122px;
+}
+.withdrawFrom .item .inputContainer {
+  width: 592px;
+} */
+.dropdownContainer {
+  margin-top: 46px;
+}
+.text {
+  color: var(--text);
+}
+.dropDownTitle,
+.heading {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.relative {
+  position: relative;
+}
+.withDrawTitle {
+  font-size: calc(1.3rem + 0.6vw);
+  font-weight: 700;
+}
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 46px;
+}
+.keyValue {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+@media only screen and (max-width: 767px) {
+  .withdrawFrom {
+    gap: 40px;
+  }
+
+  .withdrawFrom .item {
+    grid-template-columns: 1fr;
+  }
+  .withdrawFrom input {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .text {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .withdrawFrom input {
+    height: 50px;
+  }
+}

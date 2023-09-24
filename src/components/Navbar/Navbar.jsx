@@ -115,7 +115,7 @@ const Navbar = () => {
                 <img className={classes.arrow} src={chevronDown} alt="" />
               </Options>
 
-              <div className="d-flex align-items-center gap-3">
+              <div className={classes.userContainer}>
                 <img
                   className={classes.avatar}
                   src={userAvatar}
@@ -155,9 +155,6 @@ const Navbar = () => {
           <Button rounded outlined onClick={() => navigate("/wallet")}>
             Wallet
           </Button>{" "}
-          <Button rounded outlined onClick={() => navigate("/pay")}>
-            Pay
-          </Button>
           <Options
             options={[
               {

@@ -2,9 +2,9 @@
   background-color: transparent;
   border: 1px solid transparent;
   cursor: pointer;
-  height: 44px;
-  padding-left: 28px;
-  padding-right: 28px;
+  height: 42px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: inline-flex;
   align-items: center;
   gap: 16px;
@@ -24,4 +24,14 @@
 }
 .btn.outlined {
   border-color: #fff;
+}
+.image {
+  display: block;
+}
+@media only screen and (max-width: 520px) {
+  .button {
+    height: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

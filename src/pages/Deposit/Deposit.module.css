@@ -1,4 +1,16 @@
-.mainWrap .below {
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding: 50px 0;
+  }
+}
+/* .mainWrap .below {
   max-width: 1598px;
   margin-left: auto;
   margin-top: 80px;
@@ -30,4 +42,4 @@
   max-width: 1598px;
   margin-left: auto;
   margin-top: 80px;
-}
+} */

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import isEmpty from "../../components/utils/is-empty";
 import { arrowDown } from "../../images/images";
 import useOnClickOutside from "../../components/hooks/useOnClickOutside";
@@ -49,8 +49,8 @@ const Dropdown = ({
           ) : pattern1 ? (
             <div
               className={clsx(
-                "d-flex gap-2",
-                smallIcon ? "align-items-start" : "align-items-center"
+                classes.iconContainer,
+                smallIcon ? classes.alignItemsStart : classes.alignItemsCenter
               )}
             >
               <img
@@ -59,25 +59,37 @@ const Dropdown = ({
                 alt=""
               />
               <div>
-                <div className="fw-bold">
-                  {selectedOption.title}{" "}
+                <div className={classes.nameContainer}>
+                  <p className={classes.name}> {selectedOption.title} </p>
                   {noDesign && (
-                    <img className="ms-2" src={arrowDown} alt="arrow-down" />
+                    <>
+                      {isOpen ? (
+                        <BiChevronUp className={classes.arrow} />
+                      ) : (
+                        <BiChevronDown className={classes.arrow} />
+                      )}
+                    </>
                   )}{" "}
                 </div>
-                <div className="text-light-1 mt-1">
-                  {selectedOption.subTitle}
-                </div>
+                <p className={classes.subTitle}>{selectedOption.subTitle}</p>
               </div>
             </div>
           ) : (
-            <div className="fw-bold">
+            <div className={classes.bold}>
               <span>{selectedOption.title}</span>{" "}
-              <span className="text-light-1">{selectedOption.subTitle}</span>
+              <span className={classes.text}>{selectedOption.subTitle}</span>
             </div>
           )}
         </div>
-        {!noDesign && <img src={arrowDown} alt="arrow-down" />}
+        {!noDesign && (
+          <>
+            {isOpen ? (
+              <BiChevronUp className={classes.arrow} />
+            ) : (
+              <BiChevronDown className={classes.arrow} />
+            )}
+          </>
+        )}
       </div>
 
       <AnimatePresence>
@@ -102,8 +114,10 @@ const Dropdown = ({
                   {pattern1 ? (
                     <div
                       className={clsx(
-                        "d-flex gap-2",
-                        smallIcon ? "align-items-start" : "align-items-center"
+                        classes.iconContainer,
+                        smallIcon
+                          ? classes.alignItemsStart
+                          : classes.alignItemsCenter
                       )}
                     >
                       <img
@@ -115,14 +129,14 @@ const Dropdown = ({
                         alt=""
                       />
                       <div>
-                        <div className="fw-bold">{el.title}</div>
-                        <div className="text-light-1 mt-1">{el.subTitle}</div>
+                        <h4 className={classes.bold}>{el.title}</h4>
+                        <div className={classes.subTitle}>{el.subTitle}</div>
                       </div>
                     </div>
                   ) : (
-                    <div className="fw-bold">
-                      <div>{el.title}</div>{" "}
-                      <div className="text-light-1 mt-1">{el.subTitle}</div>
+                    <div className={classes.bold}>
+                      <h4>{el.title}</h4>{" "}
+                      <div className={classes.subTitle}>{el.subTitle}</div>
                     </div>
                   )}
                 </div>
