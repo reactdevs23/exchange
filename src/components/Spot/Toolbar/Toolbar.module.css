@@ -36,6 +36,7 @@
 }
 .playIcon {
   color: #767a89;
+  opacity: 0.5;
   font-size: 20px;
   cursor: pointer;
 }

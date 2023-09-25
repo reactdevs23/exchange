@@ -57,7 +57,7 @@
 .red {
   color: #f34554;
 }
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1280px) {
   .wrapper {
     max-width: 1000px;
     width: 100%;

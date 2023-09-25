@@ -1,6 +1,6 @@
 import OHLCTooltip from "./OHLCTooltip";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import classes from "./Chart.module.css";
 import PropTypes from "prop-types";
 import { format } from "d3-format";

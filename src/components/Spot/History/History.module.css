@@ -1,9 +1,13 @@
+.wrapper {
+  padding-bottom: 30px;
+}
+
 .tabs {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
-  padding: 15px 0;
+  padding-bottom: 15px;
 }
 
 .tab {

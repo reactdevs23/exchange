@@ -108,7 +108,7 @@
     flex-direction: column;
     background-color: #010e29;
     height: 100vh;
-    z-index: 5;
+    z-index: 100;
     top: 0;
     right: -320px;
     padding: 70px 40px;

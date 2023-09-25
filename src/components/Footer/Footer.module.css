@@ -1,5 +1,5 @@
 .footerWrap {
-  padding: 40px 0;
+  padding-top: 40px;
 }
 
 .title {
@@ -7,27 +7,13 @@
   font-weight: 700;
   font-size: 18px;
 }
-/* @media screen and (max-width: 1535px) {
-  .footerWrap {
-    padding: 32px;
-  }
-} */
-/* @media screen and (max-width: 575px) {
-  .footerWrap {
-    padding: 32px 20px;
-  }
-} */
+
 .footerWrap .footerMain {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 28px;
 }
-.footerWrap .footerMain .links {
-  /* width: 200px; */
-}
+
 .socialLinks {
   display: flex;
   align-items: center;

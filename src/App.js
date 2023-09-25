@@ -11,6 +11,7 @@ import Spot from "./pages/Spot/Spot";
 function App() {
   const location = useLocation();
   const hideNavbar = location.pathname === "/";
+  const hideFooter = location.pathname === "/spot";
   return (
     <>
       {!hideNavbar && <Navbar />}
@@ -23,7 +24,7 @@ function App() {
         <Route path="/withdraw" element={<WithdrawCryptoCurrency />} />
         <Route path="/pay" element={<Pay />} />
       </Routes>
-      <Footer />
+      {!hideFooter && <Footer />}
     </>
   );
 }

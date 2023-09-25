@@ -6,7 +6,7 @@ import { openOrders } from "./data";
 const History = () => {
   const [activeTab, setActiveTab] = useState("openorders");
   return (
-    <section className="">
+    <section className={classes.wrapper}>
       <div className={classes.tabs}>
         <p
           className={[
