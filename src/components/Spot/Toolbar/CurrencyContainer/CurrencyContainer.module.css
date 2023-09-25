@@ -1,0 +1,74 @@
+.currencyContainer {
+  position: relative;
+}
+.imgAndDetails {
+  display: flex;
+
+  gap: 2px;
+  cursor: pointer;
+}
+.icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.currency {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.arrow {
+  color: #767a89;
+  font-size: 16px;
+}
+.dropdownItems {
+  position: absolute;
+  min-width: 100%;
+  top: calc(100% + 6px);
+  border-radius: 10px;
+  background-color: #1e2a44;
+  z-index: 2;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullName {
+  color: var(--text, #767a89);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.dropdownItems .fullName {
+  font-size: 14px;
+}
+.dropdownItems .currency {
+  font-size: 14px;
+}
+.dropdownItems .icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.green {
+  color: #5bdf8b;
+}

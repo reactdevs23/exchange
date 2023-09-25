@@ -7,6 +7,7 @@ import Deposit from "./pages/Deposit/Deposit";
 import Pay from "./pages/Pay/Pay";
 import WithdrawCryptoCurrency from "./pages/Withdraw/WithdrawCryptoCurrency";
 import Footer from "./components/Footer/Footer";
+import Spot from "./pages/Spot/Spot";
 function App() {
   const location = useLocation();
   const hideNavbar = location.pathname === "/";
@@ -14,7 +15,7 @@ function App() {
     <>
       {!hideNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Spot />} />
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/deposit" element={<Deposit />} />
         <Route path="/convert" element={<ConvertCurrency />} />

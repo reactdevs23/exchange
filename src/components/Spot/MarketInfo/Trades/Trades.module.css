@@ -1,0 +1,132 @@
+.wrapper {
+  border-radius: 20px;
+  background: #010e29;
+  padding: 15px;
+  padding-right: 7px;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 15px 0;
+  padding-top: 0;
+}
+.tab {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 33px */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.activeTab {
+  color: #6c62e2;
+}
+.tab:hover {
+  transform: translateY(-3px);
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 533px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.header,
+.valueWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.header {
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+.heading,
+.text {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.textRight {
+  text-align: right;
+}
+.heading {
+  color: #767a88;
+  font-size: 16px;
+}
+.sellData,
+.buyData {
+  padding: 10px 0;
+}
+.buyData {
+  border-top: 1px solid #353b50;
+}
+
+.green {
+  color: #5bdf8b;
+}
+.red {
+  color: #f34554;
+}
+@media only screen and (max-width: 1600px) {
+  .data {
+    max-height: 510px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    width: 50%;
+  }
+  .data {
+    max-height: 330px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .heading,
+  .text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .heading,
+  .text {
+    font-size: 12px;
+  }
+}
+/* scrollbar css */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.data {
+  scrollbar-width: thin;
+  scrollbar-color: #6c62e2 rgba(250, 250, 250, 0.2);
+}
+
+/* Chrome, Edge, and Safari */
+.data::-webkit-scrollbar {
+  width: 5px;
+}
+
+.data::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+}
+
+.data::-webkit-scrollbar-thumb {
+  background: #6c62e2;
+  border-radius: 100vh;
+  border: none;
+}

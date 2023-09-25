@@ -77,6 +77,9 @@ import menu from "./menu.svg";
 import pageArrowLeft from "./page-arrow-left.svg";
 import pageArrowRight from "./page-arrow-right.svg";
 
+import btc from "./btc.png";
+import deleteIcon from "./deleteIcon.png";
+
 export {
   logo,
   heroImage,
@@ -147,4 +150,6 @@ export {
   menu,
   pageArrowLeft,
   pageArrowRight,
+  btc,
+  deleteIcon,
 };

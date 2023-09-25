@@ -7,7 +7,6 @@ import Dropdown from "../Dropdown/Dropdown";
 import classes from "./Convert.module.css";
 
 const Convert = ({ setChooseCurrencyModal }) => {
-  const [state, setState] = useState({ x: 10, y: 10 });
   const [isReversed, setIsReversed] = useState(false);
   const [sport, setSport] = useState(false);
   const [funding, setFunding] = useState(false);

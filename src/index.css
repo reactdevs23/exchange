@@ -67,6 +67,9 @@ a {
   .mainWrapper {
   }
 }
+.react-no-select {
+  width: 100%;
+}
 /* .block {
   display: block;
 }

@@ -1,0 +1,59 @@
+.mainWrapper {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.overFlow {
+  overflow: auto;
+}
+.title {
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.coinImg {
+  width: 34px;
+  height: 34px;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+.coin {
+  font-weight: 700;
+}
+.text {
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.primaryColor {
+  color: #6c62e2;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.viewButton {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 15px;
+  background: #6c62e2;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+.deleteIcon {
+  width: 20px;
+
+  cursor: pointer;
+}

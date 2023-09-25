@@ -1,0 +1,51 @@
+.wrapper {
+  border-radius: 20px;
+  background: #010e29;
+  padding: 5px;
+}
+
+.header,
+.valueWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.heading,
+.text {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.heading {
+  color: #767a88;
+  font-size: 18px;
+}
+.sellData,
+.buyData {
+  padding: 10px 0;
+}
+.buyData {
+  border-top: 1px solid #353b50;
+}
+
+.green {
+  color: #5bdf8b;
+}
+.red {
+  color: #f34554;
+}
+@media only screen and (max-width: 520px) {
+  .heading,
+  .text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .heading,
+  .text {
+    font-size: 12px;
+  }
+}

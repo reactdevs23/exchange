@@ -1,0 +1,119 @@
+.card {
+  border-radius: 20px;
+  background-color: #1e2a44;
+  padding: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.subText {
+  color: #767a89;
+}
+.card .inner {
+  padding: 16px 26px;
+  background-color: #010e29;
+  border-radius: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+.card .input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+}
+.value {
+  white-space: noWrap;
+}
+.sliderContainer {
+  position: relative;
+  margin: 16px 0;
+}
+.sliderDots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.sliderDots::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #17223c;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  width: calc(100% - 25px);
+  height: 10px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.sliderDots .sliderDot {
+  width: 20px;
+  height: 20px;
+  background-color: #3a4a6c;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  z-index: 1;
+}
+.sliderDots .sliderDot.active {
+  background-color: #6c62e2;
+  box-shadow: 0px 4px 20px 0px #000 40;
+}
+.button {
+  background: var(--green);
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.button:hover {
+  transform: translateY(-3px);
+}
+.button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.btnGreen {
+  background: var(--green);
+}
+.btnRed {
+  background: var(--red);
+}
+@media only screen and (max-width: 1600px) {
+  .card {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .card {
+    padding: 20px;
+    gap: 15px;
+  }
+  .card .inner {
+    padding: 12px 15px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .card {
+    padding: 20px 15px;
+  }
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.text {
+  color: var(--text, #767a89);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.green {
+  font-weight: 700;
+  color: #5bdf8b;
+}
+.highlighted {
+  font-weight: 700;
+  color: #fff;
+}
+.playContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+.playIcon {
+  color: #767a89;
+  font-size: 20px;
+  cursor: pointer;
+}
