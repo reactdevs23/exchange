@@ -1,4 +1,7 @@
+import OHLCTooltip from "./OHLCTooltip";
+
 import React, { useEffect, useState } from "react";
+import classes from "./Chart.module.css";
 import PropTypes from "prop-types";
 import { format } from "d3-format";
 import { timeFormat } from "d3-time-format";
@@ -6,7 +9,6 @@ import {
   discontinuousTimeScaleProviderBuilder,
   Chart,
   ChartCanvas,
-  BarSeries,
   CandlestickSeries,
   lastVisibleItemBasedZoomAnchor,
   XAxis,
@@ -20,7 +22,6 @@ import {
   withSize,
 } from "react-financial-charts";
 // import { useMarketData } from "./useMarketData";
-import OHLCTooltip from "./OHLCTooltip";
 
 const axisStyles = {
   strokeStyle: "transparent", // Color.GRAY
@@ -97,8 +98,6 @@ const FinancialChart = ({
     (minY + index * yStepSize).toFixed(2)
   );
 
-  console.log(yAxisLabels);
-
   // Add more data points to reach a minimum length of 40
   while (dummyData.length < 40) {
     const lastDataPoint = dummyData[dummyData.length - 1];
@@ -113,7 +112,7 @@ const FinancialChart = ({
     dummyData.push(newDataPoint);
   }
 
-  console.log(dummyData.length); // Should be at least 40 data points
+  // Should be at least 40 data points
 
   // Use yExtentsCalculator to calculate Y-axis extents
   const yExtentsCalculator = ({ plotData }) => {
@@ -132,7 +131,6 @@ const FinancialChart = ({
     return [min - padding, max + padding * 2];
   };
 
-  // Continue with the rest of your code
   const timeDisplayFormat = timeFormat(dateTimeFormat);
   const xScaleProvider =
     discontinuousTimeScaleProviderBuilder().inputDateAccessor((d) => d.date);
@@ -147,7 +145,7 @@ const FinancialChart = ({
 
   // ChartCanvas is drawn from top to bottom
   return (
-    <div>
+    <div className={classes.chartContainer}>
       <ChartCanvas
         height={height}
         ratio={ratio}
@@ -161,6 +159,7 @@ const FinancialChart = ({
         xExtents={xExtents}
         zoomAnchor={lastVisibleItemBasedZoomAnchor}
         disableZoom={true}
+        className={classes.chartContainer}
       >
         {" "}
         {/* Price Chart */}
@@ -207,7 +206,7 @@ const FinancialChart = ({
             }
           />
           <OHLCTooltip
-            origin={[8, 16]}
+            origin={[8, 12]}
             textFill={openCloseColor}
             className="react-no-select"
           />
@@ -240,6 +239,6 @@ FinancialChart.defaultProps = {
   width: 0,
 };
 
-export const PriceChart = withSize({ style: { minHeight: 500 } })(
+export const CandleStickChart = withSize({ style: { minHeight: 470 } })(
   withDeviceRatio()(FinancialChart)
 );

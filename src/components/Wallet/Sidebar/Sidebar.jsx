@@ -56,6 +56,7 @@ const Sidebar = () => {
       {items.map((el, idx) => {
         return (
           <NavLink
+            key={idx}
             to={el.to}
             className={({ isActive }) =>
               clsx(isActive && classes.active, classes.link)

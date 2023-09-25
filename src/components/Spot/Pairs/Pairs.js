@@ -44,7 +44,30 @@ const Pairs = () => {
       change: "+4.14%",
     },
     { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
-
+    {
+      pairs: "ASTR",
+      price: "0.00000319",
+      change: "<span class='red'>-0.31%</span>",
+    },
+    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
+    {
+      pairs: "ASTR",
+      price: "<span class='green'>0.0000353</span>",
+      change: "+2.87%",
+    },
+    { pairs: "AST", price: "0.0000019", change: "+2.87%" },
+    {
+      pairs: "ASTR",
+      price: "0.00000319",
+      change: "<span class='red'>-0.31%</span>",
+    },
+    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
+    {
+      pairs: "ASTR",
+      price: "<span class='green'>0.0000353</span>",
+      change: "+2.87%",
+    },
+    { pairs: "AST", price: "0.0000019", change: "+2.87%" },
     {
       pairs: "AST",
       price: "<span class='red'>0.0000353</span>",

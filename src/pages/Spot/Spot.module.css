@@ -3,36 +3,25 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
 }
 
-.chartWrapper {
-  border-radius: 20px;
-  background: #010e29;
-  padding: 12px;
-  padding-top: 30px;
-  position: relative;
-}
-
-.gridBox {
+.grid {
   display: grid;
   grid-template-columns: 350px 1fr 400px;
   gap: 15px;
   padding: 5px 0;
 }
-@media only screen and (max-width: 1600px) {
-  .gridBox {
-    grid-template-columns: minmax(100px, 1fr);
-  }
-  .chartWrapper {
-    order: -1;
 
-    grid-column: 1/-1;
+@media only screen and (max-width: 1600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
-  .pairs {
-    order: 3;
-  }
-  .buySellOrders {
-    order: 2;
+}
+@media only screen and (max-width: 991px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
   }
 }

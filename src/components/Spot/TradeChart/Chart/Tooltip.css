@@ -1,0 +1,8 @@
+@media screen and (max-width: 380px) {
+  tspan {
+    font-size: 10px; /* Adjust the font size as needed */
+  }
+  g {
+    width: 100px;
+  }
+}

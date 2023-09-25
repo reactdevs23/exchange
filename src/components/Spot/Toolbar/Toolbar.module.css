@@ -3,6 +3,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 32px;
+  padding-top: 25px;
 }
 .item {
   display: flex;

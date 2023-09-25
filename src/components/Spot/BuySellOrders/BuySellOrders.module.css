@@ -1,7 +1,8 @@
 .wrapper {
   border-radius: 20px;
   background: #010e29;
-  padding: 5px;
+  padding: 15px 12px;
+  padding-right: 2px;
 }
 
 .header,
@@ -9,6 +10,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+}
+.header {
+  padding-bottom: 15px;
 }
 .heading,
 .text {
@@ -21,11 +25,27 @@
 }
 .heading {
   color: #767a88;
-  font-size: 18px;
+  font-size: 16px;
 }
-.sellData,
+.textRight {
+  text-align: right;
+}
+.data {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.sellData {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .buyData {
-  padding: 10px 0;
+  padding-top: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .buyData {
   border-top: 1px solid #353b50;
@@ -36,6 +56,12 @@
 }
 .red {
   color: #f34554;
+}
+@media only screen and (max-width: 1600px) {
+  .wrapper {
+    max-width: 1000px;
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 520px) {
   .heading,
@@ -48,4 +74,26 @@
   .text {
     font-size: 12px;
   }
+}
+/* scrollbar css */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.data {
+  scrollbar-width: thin;
+  scrollbar-color: #6c62e2 rgba(250, 250, 250, 0.2);
+}
+
+/* Chrome, Edge, and Safari */
+.data::-webkit-scrollbar {
+  width: 5px;
+}
+
+.data::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+}
+
+.data::-webkit-scrollbar-thumb {
+  background: #6c62e2;
+  border-radius: 100vh;
+  border: none;
 }

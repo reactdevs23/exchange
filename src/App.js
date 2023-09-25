@@ -15,7 +15,8 @@ function App() {
     <>
       {!hideNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<Spot />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/spot" element={<Spot />} />
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/deposit" element={<Deposit />} />
         <Route path="/convert" element={<ConvertCurrency />} />

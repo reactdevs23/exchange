@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import classes from "./Chart.module.css";
+import "./Tooltip.css";
 import PropTypes from "prop-types";
 import { format } from "d3-format";
 import {
@@ -81,7 +81,7 @@ class OHLCTooltip extends Component {
 
     return (
       <g
-        className={`${className}`}
+        className={`${className} `}
         transform={`translate(${x}, ${y})`}
         onClick={onClick}
       >
@@ -89,7 +89,7 @@ class OHLCTooltip extends Component {
           x={0}
           y={0}
           fontFamily={fontFamily}
-          fontSize={fontSize}
+          fontSize={14}
           fontWeight={700}
         >
           <ToolTipTSpanLabel
@@ -102,6 +102,7 @@ class OHLCTooltip extends Component {
           <tspan key="value_O" fill={"#5BDF8B"}>
             {open}
           </tspan>
+
           <ToolTipTSpanLabel
             fill={labelFill}
             fontWeight={labelFontWeight}
@@ -112,6 +113,7 @@ class OHLCTooltip extends Component {
           <tspan key="value_H" fill={"#5BDF8B"}>
             {high}
           </tspan>
+
           <ToolTipTSpanLabel
             fill={labelFill}
             fontWeight={labelFontWeight}
@@ -122,7 +124,14 @@ class OHLCTooltip extends Component {
           <tspan key="value_L" fill={valueFill}>
             {low}
           </tspan>
-
+        </ToolTipText>
+        <ToolTipText
+          x={0}
+          y={25}
+          fontFamily={fontFamily}
+          fontSize={14}
+          fontWeight={700}
+        >
           <ToolTipTSpanLabel
             fill={labelFill}
             fontWeight={labelFontWeight}
