@@ -10,7 +10,7 @@ import {
   menu,
   userAvatar,
 } from "../../images/images";
-import Button from "../Button/Button";
+
 import Options from "../Options/Options";
 import classes from "./Navbar.module.css";
 
@@ -114,7 +114,6 @@ const Navbar = () => {
                 Trades{" "}
                 <img className={classes.arrow} src={chevronDown} alt="" />
               </Options>
-
               <div className={classes.userContainer}>
                 <img
                   className={classes.avatar}
@@ -127,71 +126,80 @@ const Navbar = () => {
                   <div className={classes.number}>24</div>
                 </div>
               </div>
-
-              <Button
-                rounded
-                primary
-                icon={deposit}
+              <button
+                className={[classes.btn, classes.primary].join(" ")}
                 onClick={() => navigate("/deposit")}
               >
                 Deposit
-              </Button>
-              <Button rounded outlined onClick={() => navigate("/wallet")}>
+              </button>
+              <button
+                className={[classes.btn, classes.outlined].join(" ")}
+                onClick={() => navigate("/wallet")}
+              >
+                {" "}
                 Wallet
-              </Button>
+              </button>{" "}
             </div>
           </div>
         </div>
 
-        <div className={classes.right}>
-          <Button
-            rounded
-            primary
-            icon={deposit}
-            onClick={() => navigate("/deposit")}
-          >
-            Deposit
-          </Button>
-          <Button rounded outlined onClick={() => navigate("/wallet")}>
-            Wallet
-          </Button>{" "}
-          <Options
-            options={[
-              {
-                label: "Foo",
-                to: "/foo",
-              },
-              {
-                label: "Buzz",
-                to: "/",
-              },
-            ]}
-          >
-            Assets <img className={classes.arrow} src={chevronDown} alt="" />
-          </Options>
-          <Options
-            options={[
-              {
-                label: "Foo",
-                to: "/foo",
-              },
-              {
-                label: "Buzz",
-                to: "/",
-              },
-            ]}
-          >
-            Trades <img className={classes.arrow} src={chevronDown} alt="" />
-          </Options>
-          <div className={classes.notifications}>
-            <img src={bell} alt="bell" />
-            <div className={classes.number}>24</div>
+        <div className={classes.rightAndUserWrapper}>
+          <div className={classes.right}>
+            <button
+              className={[classes.btn, classes.primary].join(" ")}
+              onClick={() => navigate("/deposit")}
+            >
+              Deposit
+            </button>
+            <button
+              className={[classes.btn, classes.outlined].join(" ")}
+              onClick={() => navigate("/wallet")}
+            >
+              Wallet
+            </button>{" "}
+            <Options
+              options={[
+                {
+                  label: "Foo",
+                  to: "/foo",
+                },
+                {
+                  label: "Buzz",
+                  to: "/",
+                },
+              ]}
+            >
+              Assets <img className={classes.arrow} src={chevronDown} alt="" />
+            </Options>
+            <Options
+              options={[
+                {
+                  label: "Foo",
+                  to: "/foo",
+                },
+                {
+                  label: "Buzz",
+                  to: "/",
+                },
+              ]}
+            >
+              Trades <img className={classes.arrow} src={chevronDown} alt="" />
+            </Options>
           </div>
-          <img className={classes.avatar} src={userAvatar} alt="user-avatar" />
-        </div>
-
-        <div className={classes.menu} onClick={() => setIsOpen(true)}>
-          <img src={menu} alt="menu" />
+          <div className={classes.userWrpper}>
+            <div className={classes.notifications}>
+              <img src={bell} alt="bell" />
+              <div className={classes.number}>24</div>
+            </div>
+            <img
+              className={classes.avatar}
+              src={userAvatar}
+              alt="user-avatar"
+            />
+            <div className={classes.menu} onClick={() => setIsOpen(true)}>
+              <img src={menu} alt="menu" />
+            </div>
+          </div>
         </div>
       </div>
     </>
