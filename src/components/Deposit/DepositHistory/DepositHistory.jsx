@@ -22,6 +22,7 @@ const columns = [
     name: "Time",
     selector: (row) => row.total,
     sortable: true,
+    minWidth: "140px",
     cell: (row) => <p className={classes.text}>{row.time}</p>,
   },
   {
