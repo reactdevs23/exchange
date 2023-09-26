@@ -3,191 +3,110 @@ import styles from "./Trades.module.css";
 
 const Trades = () => {
   const [activeTab, setActiveTab] = useState("markettrades");
+  const priceLimitForChangingColorRedGreen = 60000;
   const data = [
     {
-      price: "<span class='red'>55,134.11</span>",
-      amount: "0.53515",
+      price: 55134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-
-    {
-      price: "<span class='red'>30,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-    {
-      price: "<span class='red'>20,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
+      price: 61134.11,
+      amount: 0.64741,
       time: "16:42:15",
     },
 
     {
-      price: "<span class='red'>28,134.11</span>",
-      amount: "0.53515",
+      price: 30134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
+      price: 61134.11,
       amount: "0.64741",
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
+      price: 20134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "<span class='red'>40,134.11</span>",
-      amount: "0.64741",
+      price: 55134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "<span class='red'>55,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
+      price: 61134.11,
+      amount: 0.64741,
       time: "16:42:15",
     },
 
     {
-      price: "<span class='red'>30,134.11</span>",
-      amount: "0.53515",
+      price: 30134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
+      price: 61134.11,
       amount: "0.64741",
       time: "16:42:15",
     },
     {
-      price: "<span class='red'>20,134.11</span>",
-      amount: "0.53515",
+      price: 20134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
+      price: 55134.11,
+      amount: 0.53515,
+      time: "16:42:15",
+    },
+    {
+      price: 61134.11,
+      amount: 0.64741,
       time: "16:42:15",
     },
 
     {
-      price: "<span class='red'>28,134.11</span>",
-      amount: "0.53515",
+      price: 30134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
+      price: 61134.11,
       amount: "0.64741",
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
+      price: 20134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "<span class='red'>40,134.11</span>",
-      amount: "0.64741",
+      price: 55134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "<span class='red'>30,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-    {
-      price: "<span class='red'>20,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
+      price: 61134.11,
+      amount: 0.64741,
       time: "16:42:15",
     },
 
     {
-      price: "<span class='red'>28,134.11</span>",
-      amount: "0.53515",
+      price: 30134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
+      price: 61134.11,
       amount: "0.64741",
       time: "16:42:15",
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "<span class='red'>40,134.11</span>",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-    {
-      price: "<span class='red'>30,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-    {
-      price: "<span class='red'>20,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-
-    {
-      price: "<span class='red'>28,134.11</span>",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      time: "16:42:15",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.53515",
-      time: "16:42:15",
-    },
-    {
-      price: "<span class='red'>40,134.11</span>",
-      amount: "0.64741",
+      price: 20134.11,
+      amount: 0.53515,
       time: "16:42:15",
     },
   ];
@@ -231,9 +150,15 @@ const Trades = () => {
         {data.map((el, i) => (
           <div key={i} className={styles.valueWrapper}>
             <p
-              className={[styles.text, styles.green].join(" ")}
-              dangerouslySetInnerHTML={{ __html: el.price }}
-            ></p>
+              className={[
+                styles.text,
+                priceLimitForChangingColorRedGreen < el.price
+                  ? styles.green
+                  : styles.red,
+              ].join(" ")}
+            >
+              {el.price.toLocaleString()}
+            </p>
             <p className={[styles.text, styles.textRight].join(" ")}>
               {el.amount}
             </p>

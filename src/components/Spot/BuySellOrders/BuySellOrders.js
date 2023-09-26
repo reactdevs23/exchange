@@ -4,153 +4,118 @@ import styles from "./BuySellOrders.module.css";
 const BuySellOrders = () => {
   const sellData = [
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
 
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
-    },
-    {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
   ];
   const buyData = [
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
 
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.53515",
-      total: "174.8447",
+      price: 61134.11,
+      amount: 0.53515,
+      total: 174.8447,
     },
     {
-      price: "61,134.11",
-      amount: "0.64741",
-      total: "10.8447",
+      price: 61134.11,
+      amount: 0.64741,
+      total: 10.8447,
     },
   ];
   return (
@@ -173,13 +138,13 @@ const BuySellOrders = () => {
           {sellData.map((el, i) => (
             <div key={i} className={styles.valueWrapper}>
               <p className={[styles.text, styles.green].join(" ")}>
-                {el.price}
+                {el.price.toLocaleString()}
               </p>
               <p className={[styles.text, styles.textRight].join(" ")}>
-                {el.amount}
+                {el.amount.toLocaleString()}
               </p>
               <p className={[styles.text, styles.textRight].join(" ")}>
-                {el.total}
+                {el.total.toLocaleString()}
               </p>
             </div>
           ))}

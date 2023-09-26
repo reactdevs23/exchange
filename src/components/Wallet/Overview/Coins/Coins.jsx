@@ -49,19 +49,21 @@ const columns = [
   {
     name: "Today's Pnl",
     cell: (row) => (
-      <div className={clsx(row.todayPnl >= 0 ? "text-green" : "text-red")}>
+      <p className={clsx(row.todayPnl >= 0 ? classes.green : classes.red)}>
+        {row.todayPnl >= 0 && "+"}
         {row.todayPnl}
-      </div>
+      </p>
     ),
   },
   {
     name: "Today's Pnl (%)",
     cell: (row) => (
-      <div
-        className={clsx(row.todayPnlPercent >= 0 ? "text-green" : "text-red")}
+      <p
+        className={clsx(row.todayPnlPercent >= 0 ? classes.green : classes.red)}
       >
+        {row.todayPnlPercent >= 0 && "+"}
         {row.todayPnlPercent}%
-      </div>
+      </p>
     ),
   },
   {

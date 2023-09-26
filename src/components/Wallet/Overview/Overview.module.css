@@ -5,7 +5,7 @@
 .top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+
   margin-bottom: 50px;
   flex-wrap: wrap;
   gap: 30px;
@@ -25,7 +25,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 18px;
 }
 
 .subTitle1 {
@@ -49,25 +49,72 @@
   font-weight: 500;
   color: var(--text);
 }
-.tabs {
+.green {
+  color: #5bdf8b;
+}
+.red {
+  color: #f34554;
+}
+.right {
   display: flex;
-  align-items: center;
   gap: 24px;
+  margin-left: auto;
 }
 
 .tab {
-  color: var(--text);
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  background: #353b50;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  padding-left: 12px;
+  border-radius: 20px;
 }
-.tab.active {
-  color: #fff;
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  cursor: pointer;
+}
+.arrow {
+  font-size: 18px;
+}
+.dropdownItems {
+  padding: 8px 8px;
+  background: #353b50;
+  border-radius: 12px;
+  position: absolute;
+  top: calc(100% + 4px);
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.text {
+  font-size: 18px;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.valueContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 7px;
+}
+.valueContainer .green {
+  text-align: right;
 }
 
 @media only screen and (max-width: 575px) {
   .bottom > * {
-    width: 100%;
   }
   .tabs {
     justify-content: space-between;

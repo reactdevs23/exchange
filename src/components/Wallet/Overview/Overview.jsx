@@ -1,16 +1,25 @@
 import { useState } from "react";
 import clsx from "clsx";
-
+import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import { eye } from "../../../images/images";
 import Button from "../../Button/Button";
 import classes from "./Overview.module.css";
 import Coins from "./Coins/Coins";
 
-const tabs = ["PNL", "Today"];
-
 const Overview = () => {
-  const [activeTab, setActiveTab] = useState("Today");
-
+  const [active, setActive] = useState(0);
+  const [dropdown, setDropDown] = useState(false);
+  const dropdownItems = [
+    { title: "Today", value: ["+$10.91", "+0.43%"] },
+    { title: "Yesterday", value: ["+$50.91", "+0.13%"] },
+  ];
+  const handleDropDown = () => {
+    if (dropdown) {
+      setDropDown(false);
+    } else {
+      setDropDown(true);
+    }
+  };
   return (
     <>
       <div className={classes.overview}>
@@ -40,26 +49,44 @@ const Overview = () => {
             <div className={classes.subTitle3}>≈ $2,527.45</div>
           </div>
           <div className={classes.right}>
-            <div className={classes.tabs}>
-              {tabs.map((el, idx) => {
-                return (
-                  <div
-                    key={"tab-item-" + idx}
-                    className={clsx(
-                      classes.tab,
-                      activeTab === el && classes.active
-                    )}
-                    onClick={() => setActiveTab(el)}
-                  >
-                    {el}
-                  </div>
-                );
-              })}
-            </div>
+            <p className={classes.text}>PNL</p>
 
-            <div className="text-right mt-8">
-              <div className="text-green">+$10.91</div>
-              <div className="text-green">+0.43%</div>
+            <div className={classes.valuesWrapper}>
+              <div className={classes.dropdown}>
+                <p className={clsx(classes.tab)} onClick={handleDropDown}>
+                  {dropdownItems[active].title}
+                  {dropdown ? (
+                    <BiChevronUp className={classes.arrow} />
+                  ) : (
+                    <BiChevronDown className={classes.arrow} />
+                  )}
+                </p>
+                {dropdown && (
+                  <div className={classes.dropdownItems}>
+                    {dropdownItems.map((el, i) => (
+                      <p
+                        key={i}
+                        onClick={() => {
+                          setDropDown(false);
+                          setActive(i);
+                        }}
+                      >
+                        {el.title}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className={classes.valueContainer}>
+                <p className={classes.green}>
+                  {" "}
+                  {dropdownItems[active].value[0]}
+                </p>
+                <p className={classes.green}>
+                  {" "}
+                  {dropdownItems[active].value[1]}
+                </p>
+              </div>
             </div>
           </div>
         </div>

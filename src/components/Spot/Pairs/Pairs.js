@@ -8,82 +8,79 @@ import Currencies from "./Currencies/Currencies";
 
 const Pairs = () => {
   const [searchValue, setSearchValue] = useState("");
+  let plusPriceConditionAmount;
+  const forPriceColorCondition = (value) => {
+    plusPriceConditionAmount = 0.3;
+    if (value > plusPriceConditionAmount) {
+      return styles.green;
+    } else if (value < 0.1) {
+      return styles.red;
+    } else return styles.white;
+  };
   const data = [
-    { pairs: "ARPA", price: "0.0000019", change: "+2.87%" },
+    { pairs: "AST", price: 0.0000019, change: -2.87 },
+    { pairs: "ARPA", price: 0.0000353, change: 2.87 },
     {
       pairs: "AST",
-      price: "<span class='red'>0.0000353</span>",
-      change: "+4.14%",
+      price: 0.3000353,
+      change: 4.14,
     },
-    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
+
+    {
+      pairs: "ASTR",
+      price: 0.1000353,
+      change: 2.87,
+    },
+    { pairs: "AST", price: 0.0000019, change: -2.87 },
+    { pairs: "ARPA", price: 0.0000353, change: 2.87 },
     {
       pairs: "AST",
-      price: "<span class='green'>0.0000353</span>",
-      change: "+2.87%",
+      price: 0.3000353,
+      change: 4.14,
     },
+    { pairs: "ASTR", price: 0.00000319, change: -2.69 },
+    { pairs: "AST", price: 0.0000019, change: -2.87 },
+    { pairs: "ARPA", price: 0.0000353, change: 2.87 },
     {
       pairs: "AST",
-      price: "<span class='red'>0.0000353</span>",
-      change: "+4.14%",
+      price: 0.3000353,
+      change: 4.14,
     },
+
     {
       pairs: "ASTR",
-      price: "0.00000319",
-      change: "<span class='red'>-0.31%</span>",
+      price: 0.1000353,
+      change: 2.87,
     },
-    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
-    {
-      pairs: "ASTR",
-      price: "<span class='green'>0.0000353</span>",
-      change: "+2.87%",
-    },
-    { pairs: "AST", price: "0.0000019", change: "+2.87%" },
+    { pairs: "AST", price: 0.0000019, change: -2.87 },
+    { pairs: "ARPA", price: 0.0000353, change: 2.87 },
     {
       pairs: "AST",
-      price: "<span class='red'>0.0000353</span>",
-      change: "+4.14%",
+      price: 0.3000353,
+      change: 4.14,
     },
-    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
-    {
-      pairs: "ASTR",
-      price: "0.00000319",
-      change: "<span class='red'>-0.31%</span>",
-    },
-    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
-    {
-      pairs: "ASTR",
-      price: "<span class='green'>0.0000353</span>",
-      change: "+2.87%",
-    },
-    { pairs: "AST", price: "0.0000019", change: "+2.87%" },
-    {
-      pairs: "ASTR",
-      price: "0.00000319",
-      change: "<span class='red'>-0.31%</span>",
-    },
-    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
-    {
-      pairs: "ASTR",
-      price: "<span class='green'>0.0000353</span>",
-      change: "+2.87%",
-    },
-    { pairs: "AST", price: "0.0000019", change: "+2.87%" },
+    { pairs: "ASTR", price: 0.00000319, change: -2.69 },
+    { pairs: "AST", price: 0.0000019, change: -2.87 },
+    { pairs: "ARPA", price: 0.0000353, change: 2.87 },
     {
       pairs: "AST",
-      price: "<span class='red'>0.0000353</span>",
-      change: "+4.14%",
+      price: 0.3000353,
+      change: 4.14,
     },
+
     {
       pairs: "ASTR",
-      price: "0.00000319",
-      change: "<span class='red'>-0.31%</span>",
+      price: 0.1000353,
+      change: 2.87,
     },
-    { pairs: "ASTR", price: "0.00000319", change: "+2.69%" },
+    { pairs: "AST", price: 0.0000019, change: -2.87 },
+    { pairs: "ARPA", price: 0.0000353, change: 2.87 },
     {
-      pairs: "ARPA",
-      price: "<span class='green'>0.0000353</span>",
-      change: "+2.87%",
+      pairs: "AST",
+      price: 0.3000353,
+      change: 4.14,
     },
+    { pairs: "ASTR", price: 0.00000319, change: -2.69 },
   ];
   const filteredData = searchValue
     ? data.filter((item) => item.pairs.toLowerCase().includes(searchValue))
@@ -134,17 +131,31 @@ const Pairs = () => {
                 </span>
               </p>{" "}
               <p
-                className={[styles.text, styles.price, styles.textRight].join(
-                  " "
-                )}
-                dangerouslySetInnerHTML={{ __html: el.price }}
-              ></p>
+                className={[
+                  styles.text,
+                  styles.price,
+                  styles.textRight,
+                  forPriceColorCondition(el.price),
+                ].join(" ")}
+              >
+                {plusPriceConditionAmount < el.price && "+"}
+                {el.price}
+              </p>
               <p
-                className={[styles.text, styles.textRight, styles.green].join(
-                  " "
-                )}
-                dangerouslySetInnerHTML={{ __html: el.change }}
-              ></p>
+                className={[
+                  styles.text,
+                  styles.textRight,
+                  styles.green,
+                  el.change > 0
+                    ? styles.green
+                    : el.change < 0
+                    ? styles.red
+                    : "",
+                ].join(" ")}
+              >
+                {el.change > 0 && "+"}
+                {el.change.toLocaleString()}%
+              </p>
             </div>
           ))}
         </div>

@@ -61,6 +61,12 @@
 .text {
   color: var(--text);
 }
+.green {
+  color: #5bdf8b;
+}
+.red {
+  color: #f34554;
+}
 .tableContainer {
   overflow: auto;
 }
