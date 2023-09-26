@@ -136,7 +136,7 @@
 
 /* Chrome, Edge, and Safari */
 .valueContainer::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .valueContainer::-webkit-scrollbar-track {

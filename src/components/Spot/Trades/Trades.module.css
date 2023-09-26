@@ -118,7 +118,7 @@
 
 /* Chrome, Edge, and Safari */
 .data::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .data::-webkit-scrollbar-track {
