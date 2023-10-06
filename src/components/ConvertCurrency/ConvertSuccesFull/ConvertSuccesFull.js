@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styles from "./ConvertSuccesFull.module.css";
-import { check, copyIcon } from "../../../images/imags";
+import { check, copyIcon } from "../../../images/images";
 
 const ConvertSuccesFull = () => {
   const [copyDesignationId, setCopyDesignationId] = useState(false);

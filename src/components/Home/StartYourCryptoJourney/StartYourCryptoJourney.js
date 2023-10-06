@@ -5,7 +5,7 @@ import {
   startCryptoGoldCoin,
   startCryptoImage,
   startCryptoUnion,
-} from "../../../images/imags";
+} from "../../../images/images";
 
 const StartYourCryptoJourney = () => {
   return (

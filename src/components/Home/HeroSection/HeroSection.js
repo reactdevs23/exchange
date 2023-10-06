@@ -1,6 +1,6 @@
 import React from "react";
 import { GiRoundStar } from "react-icons/gi";
-import { heroImage, user1, user2, user3, user4 } from "../../../images/imags";
+import { heroImage, user1, user2, user3, user4 } from "../../../images/images";
 import styles from "./HeroSection.module.css";
 
 const HeroSection = () => {

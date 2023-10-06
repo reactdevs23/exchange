@@ -5,7 +5,7 @@ import {
   forEveryOneImg,
   forEveryoneBgUnion,
   forEveryoneCoinImg,
-} from "../../../images/imags";
+} from "../../../images/images";
 import styles from "./ForEveryOne.module.css";
 
 const ForEveryOne = () => {

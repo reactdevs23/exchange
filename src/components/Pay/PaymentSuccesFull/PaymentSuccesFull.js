@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { check, copyIcon } from "../../../images/imags";
+import { check, copyIcon, userAvatar } from "../../../images/images";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styles from "./PaymentSuccesFull.module.css";
-import { userAvatar } from "../../../images/images";
 
 const PaymentSuccesFull = () => {
   const [copyDesignationId, setCopyDesignationId] = useState(false);

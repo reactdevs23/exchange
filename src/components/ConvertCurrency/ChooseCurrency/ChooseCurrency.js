@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
-import { cake, eth, ada, sol, dot, link } from "../../../images/imags";
+import { cake, eth, ada, sol, dot, link } from "../../../images/images";
 import styles from "./ChooseCurrency.module.css";
 
 const ChooseCurrency = ({

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import { NavLink, useNavigate } from "react-router-dom";
-import { logo } from "../../../images/imags";
+import { logo } from "../../../images/images";
 import styles from "./Header.module.css";
 
 const Header = () => {

@@ -6,7 +6,7 @@ import {
   lowCommission,
   featureCoin,
   featureArrow,
-} from "../../../images/imags";
+} from "../../../images/images";
 import styles from "./WhatWeOffer.module.css";
 
 import { Heading, Title, Tagline } from "../CommonStyle/CommontStyles";

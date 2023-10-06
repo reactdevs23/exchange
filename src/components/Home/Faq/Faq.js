@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import { Heading, Title, Tagline } from "../CommonStyle/CommontStyles";
 import styles from "./Faq.module.css";
-import { faqCoin, faqImage, faqStar } from "../../../images/imags";
+import { faqCoin, faqImage, faqStar } from "../../../images/images";
 
 const Faq = () => {
   const [activeFaq, setActiveFaq] = useState(0);

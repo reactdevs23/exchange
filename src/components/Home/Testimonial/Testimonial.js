@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { RiDoubleQuotesR } from "react-icons/ri";
-import { user1, user2, user3 } from "../../../images/imags";
+import { user1, user2, user3 } from "../../../images/images";
 import { Text, Title } from "../CommonStyle/CommontStyles";
 import styles from "./Testimonial.module.css";
 

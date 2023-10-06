@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Heading, Title, Tagline } from "../CommonStyle/CommontStyles";
-import { onePlatformBg, onePltformImg } from "../../../images/imags";
+import { onePlatformBg, onePltformImg } from "../../../images/images";
 import styles from "./OnePlatform.module.css";
 
 const OnePlatform = () => {
