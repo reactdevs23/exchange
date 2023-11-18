@@ -1,0 +1,45 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  padding-top: 20px;
+  width: 100%;
+}
+.label {
+  color: #fff;
+  font-size: 13px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+
+  cursor: pointer;
+
+  position: relative;
+  display: flex;
+  gap: 6px;
+}
+.required {
+  color: #ff5151;
+}
+
+.input {
+  color: #fff;
+  font-size: 15px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 12px 12px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #09152f;
+}
+@media only screen and (max-width: 520px) {
+  .input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}

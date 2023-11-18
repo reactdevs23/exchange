@@ -75,13 +75,13 @@ const Header = () => {
               ].join(" ")}
             >
               <button
-                onClick={() => navigate("/wallet")}
+                onClick={() => navigate("/login")}
                 className={[styles.button, styles.signInButton].join(" ")}
               >
                 Sign In
               </button>{" "}
               <button
-                onClick={() => navigate("/wallet")}
+                onClick={() => navigate("/signup")}
                 className={[styles.button, styles.signUpButton].join(" ")}
               >
                 Sign Up
@@ -91,13 +91,13 @@ const Header = () => {
 
           <div className={styles.buttonContainer}>
             <button
-              onClick={() => navigate("/wallet")}
+              onClick={() => navigate("/login")}
               className={[styles.button, styles.signInButton].join(" ")}
             >
               Sign In
             </button>{" "}
             <button
-              onClick={() => navigate("/wallet")}
+              onClick={() => navigate("/signin")}
               className={[styles.button, styles.signUpButton].join(" ")}
             >
               Sign Up
