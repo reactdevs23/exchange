@@ -43,7 +43,7 @@ const Dropdown = ({
       <div
         className={classes.dropdown}
         ref={dropdownRef}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(true)}
         onTouchMove={handleTouchMove}
       >
         <div>
@@ -87,9 +87,15 @@ const Dropdown = ({
         {!noDesign && (
           <>
             {isOpen ? (
-              <BiChevronUp className={classes.arrow} />
+              <BiChevronUp
+                className={classes.arrow}
+                onClick={() => setIsOpen(false)}
+              />
             ) : (
-              <BiChevronDown className={classes.arrow} />
+              <BiChevronDown
+                className={classes.arrow}
+                onClick={() => setIsOpen(true)}
+              />
             )}
           </>
         )}
