@@ -39,10 +39,12 @@ const Dropdown = ({
     e.preventDefault();
   };
   return (
-    <div className={clsx(classes.dropdownWrap, noDesign && classes.noDesign)}>
+    <div
+      className={clsx(classes.dropdownWrap, noDesign && classes.noDesign)}
+      ref={dropdownRef}
+    >
       <div
         className={classes.dropdown}
-        ref={dropdownRef}
         onClick={() => setIsOpen(true)}
         onTouchMove={handleTouchMove}
       >
