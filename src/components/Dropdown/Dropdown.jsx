@@ -35,19 +35,13 @@ const Dropdown = ({
   }, [defaultSelected, options]);
 
   // console.log({ selectedOption });
-  const handleTouchMove = (e) => {
-    e.preventDefault();
-  };
+
   return (
     <div
       className={clsx(classes.dropdownWrap, noDesign && classes.noDesign)}
       ref={dropdownRef}
     >
-      <div
-        className={classes.dropdown}
-        onClick={() => setIsOpen(true)}
-        onTouchMove={handleTouchMove}
-      >
+      <div className={classes.dropdown} onClick={() => setIsOpen(!isOpen)}>
         <div>
           {isEmpty(selectedOption) ? (
             placeholder
