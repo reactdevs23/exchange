@@ -9,7 +9,9 @@ import classes from "./DepositCrypto.module.css";
 
 const DepositCrypto = () => {
   const [step, setStep] = useState(1);
-
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className={classes.mainWrapper}>
       <div className={classes.buttonContainer}>
